@@ -84,7 +84,7 @@ for idx, (img, mask) in enumerate(testSet):
     image_accuracy = np.mean(mask == pred_mask)
     image_path = "./results/pred_" + str(idx) + ".png"
     print("=> accuracy: %.4f, saving %s" % (image_accuracy, image_path))
-    ret, binary = cv2.threshold(img,12,255,cv2.THRESH_BINARY)
+    ret, binary = cv2.threshold(img, 12, 255, cv2.THRESH_BINARY)
     cv2.imwrite(image_path, binary)
 
     img1 = cv2.imread(image_path, 0)
