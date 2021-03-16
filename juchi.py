@@ -2,7 +2,7 @@ from PIL import Image
 import cv2
 import numpy as np
 
-img_path = "opening_1_5.5.png"  # 获取图片路径
+img_path = "opening/opening_18.png"  # 获取图片路径
 img = Image.open(img_path)
 img_sp = cv2.imread(img_path)
 sp = img_sp.shape  # 读取图片长宽
@@ -37,4 +37,5 @@ img = img.resize((sp[1] * 16, sp[0] * 16), Image.ANTIALIAS)
 #             pixdata[x, y] = 0
 #         else:
 #             pixdata[x, y] = 255
-img.save('5.5.1.png')
+
+img.save('juchi1/18.png')
